@@ -1,0 +1,18 @@
+<head>
+<title>Login</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div>
+		<h1>Create User</h1>
+		
+		<form th:action="@{user/create}" method="post">
+			<label>First name:</label> <input name="name"/><br>
+			<br>
+
+			<button type="submit" value="Submit">Create</button>
+		</form>
+	</div>
+
+</body>
+</html>

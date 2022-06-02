@@ -1,0 +1,28 @@
+<head>
+<title>Login</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div>
+		<h1>Person Table</h1>
+		<div>
+			<a th:href="@{/user/create}">ADD new</a>
+		</div>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>Name</th>
+				<th>Option</th>
+			</tr>
+			<tr th:each="person:${Listperson}">
+				<td th:text="${person.id}"></td>
+				<td th:text="${person.name}"></td>
+				<td><a th:href="@{'/user/delete?id=' + ${person.id}}">Delete</a>
+					<a th:href="@{'/user/edit?id=' + ${person.id}}">Edit</a></td>
+			</tr>
+
+		</table>
+	</div>
+
+</body>
+</html>
